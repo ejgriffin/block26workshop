@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import App from "../App";
+import ContactList from "./ContactList";
 
 export default function SelectedContact({
   selectedContactId,
@@ -26,7 +28,7 @@ export default function SelectedContact({
       <p>{contact?.email}</p>
       <p>{contact?.address?.city}</p>
       <p>{contact?.phone}</p>
-      <button>Close</button>
+      <button onClick={() => setSelectedContactId(null)}>Return</button>
     </div>
   );
 }
